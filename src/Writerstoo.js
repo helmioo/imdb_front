@@ -28,6 +28,7 @@ export default function Writerstoo({ url }) {
     return (
         <div className='container-fluid'>
             <div className='row'>
+                {/* Klikkauksella lähdetään suorittamaan funktiota */}
                 <button className='btn secondary-button mb-4' onClick={GetRoles}> Lord of the Rings-series, find out by pressing the button!</button>
                 <table className='table'>
                     <thead>

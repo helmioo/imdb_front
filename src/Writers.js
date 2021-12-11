@@ -26,6 +26,7 @@ export default function Writers({url}) {
     return (
         <div className='container-fluid'>
             <div className='row'>
+                {/* Klikkauksella lähdetään suorittamaan funktiota */}
             <button className='btn secondary-button mb-4' onClick={GetRoles}> Harry Potter-series, find out by pressing the button!</button>
                 <table className='table'>
                     <thead>
@@ -34,11 +35,13 @@ export default function Writers({url}) {
                         <th>In what film?</th>
                     </thead>
                     <tbody>
+                        {/* Näytetään spinneri niin kauan kuin taulukko latautuu */}
                         {isLoaded === false ? (
                             <div className="spinner-border text-info" role="status">
                             <span className="visually-hidden">Loading...</span>
                           </div>
                         ) : (
+                             // Mapataan taulukosta halutut tiedot sivulle
                         (rows?.map(row => (
                             <tr key={uuid()}>
                                 <td>{row.name_}</td>
